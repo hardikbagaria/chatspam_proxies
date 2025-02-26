@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot Broadcaster</title>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <h1>Broadcast Message to Bots</h1>
+    <p>Online Bots: <span id="botCount">0</span></p>
+    <input type="text" id="messageInput" placeholder="Enter message">
+    <button onclick="sendMessage()">Send</button>
+    
+    <script>
+        const socket = io();
+
+        socket.on('botCount', (count) => {
+            document.getElementById('botCount').innerText = count;
+        });
+
+        function sendMessage() {
+            const message = document.getElementById('messageInput').value;
+            socket.emit('sendMessage', message);
+        }
+    </script>
+</body>
+</html>

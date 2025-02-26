@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "fs": "^0.0.1-security",
+    "mineflayer": "^4.25.0",
+    "mineflayer-pathfinder": "^2.4.5",
+    "proxy-agent": "^6.5.0",
+    "socket.io": "^4.8.1",
+    "vec3": "^0.1.10"
+  },
+  "name": "chatspam",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
